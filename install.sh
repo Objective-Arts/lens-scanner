@@ -3,12 +3,17 @@ set -euo pipefail
 
 script_dir="$(cd "$(dirname "$0")" && pwd)"
 
-# Find project root: walk up from node_modules to the project that installed us
-if [[ "$script_dir" == *node_modules* ]]; then
+# Determine project root
+if [ -n "${1:-}" ]; then
+  # Explicit target: ./install.sh /path/to/project
+  root="$(cd "$1" && pwd)"
+elif [[ "$script_dir" == *node_modules* ]]; then
+  # npm postinstall: walk up from node_modules
   root="${script_dir%%/node_modules/*}"
 else
-  # Direct clone / manual install — assume parent directory is the target
-  root="$(cd "$script_dir/.." && pwd)"
+  echo "Usage: ./install.sh <project-root>"
+  echo "  Or install via npm: npm install --save-dev <git-url>"
+  exit 1
 fi
 
 mkdir -p "$root/.claude/skills/code-scan"
