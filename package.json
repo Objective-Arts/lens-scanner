@@ -1,0 +1,20 @@
+{
+  "name": "claude-code-scan",
+  "version": "1.0.0",
+  "description": "13-dimension code scanner for Claude Code. Language-agnostic with rubric augmentation.",
+  "scripts": {
+    "postinstall": "./install.sh"
+  },
+  "files": [
+    "skill/",
+    "rubric/",
+    "install.sh"
+  ],
+  "keywords": [
+    "claude-code",
+    "code-quality",
+    "static-analysis",
+    "skill"
+  ],
+  "license": "MIT"
+}
