@@ -4,6 +4,7 @@ Load `base.md` and `product-quality.md` **always**. Then check the target for do
 
 | Signal | Check | Load |
 |--------|-------|------|
+| TypeScript | `.ts`/`.tsx` files, `tsconfig.json`, type annotations, interfaces, generics | `typescript.md` |
 | Angular | `@angular/core`, `@Component`, `@Injectable`, `NgModule`, `angular.json`, `.component.ts`, `.service.ts` | `angular.md` |
 | Java | `.java` files, `pom.xml`, `build.gradle`, `@SpringBootApplication`, `@RestController`, `javax.`/`jakarta.` imports | `java.md` |
 | HTTP server | Express, Fastify, Koa, Hono, `http.createServer`, `app.listen`, `router.get`, ASP.NET, Flask, Django | `web-api.md` |
