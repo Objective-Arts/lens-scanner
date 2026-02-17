@@ -1,5 +1,5 @@
 {
-  "name": "claude-code-scan",
+  "name": "lens-scanner",
   "version": "1.1.0",
   "description": "13-dimension code scanner for Claude Code. Language-agnostic with rubric augmentation.",
   "scripts": {
